@@ -1,0 +1,46 @@
+﻿@page
+@model LibMan_c1627015m.Pages.ListBookModel
+@{
+    ViewData["Title"] = "ListBook";
+    Layout = "~/Pages/Shared/_LayoutLogin.cshtml";
+}
+
+<h1 style="color:black" >Your books</h1>
+<p style="color:black"> You can see/edit/delete all of your books here.</p>
+<body style="background-color:black">
+    @foreach (var item in Model.Book)
+    {
+        if (item.Username == Model.Username)
+        {
+
+            <div class="card mb-3" style="max-width: 400px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="~/@item.BookCover" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Tittle)</h5>
+                            <p class="card-text">Author: @Html.DisplayFor(modelItem => item.Author)</p>
+                            <p class="card-text">Translator: @Html.DisplayFor(modelItem => item.Translator)</p>
+                            <p class="card-text">Publisher: @Html.DisplayFor(modelItem => item.Publisher)</p>
+                            <p class="card-text">Description: @Html.DisplayFor(modelItem => item.BookDescription)</p>
+                            <p class="card-text">Categorie: @Html.DisplayFor(modelItem => item.Categories)</p>
+                            <p class="card-text">Reading Status: @Html.DisplayFor(modelItem => item.ReadingStatus)</p>
+                            <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                            <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        }
+
+    }
+
+</body>

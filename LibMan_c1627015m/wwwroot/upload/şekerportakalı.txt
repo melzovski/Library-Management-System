@@ -1,0 +1,18 @@
+{
+"Book":
+[
+ {
+                 'Id': 9,
+		 'Username': 'arz',
+                 'Tittle': '',
+                 'Author': 'Jose Mauro De Vasconcelos',
+		 'Translator': 'Emrah İmre',
+		 'Publisher': 'Can Yayınları',
+		 'BookDescription': 'bir çocuk kitabı',
+		 'BookCover': 'image/şekerportakalı.jpg',
+		 'Categories': 'roman',
+		 'ReadingStatus': 'not completed'
+                 
+ }
+]
+}

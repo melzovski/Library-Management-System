@@ -1,0 +1,60 @@
+﻿@page
+@model LibMan_c1627015m.Pages.JSONModel
+
+@{
+    ViewData["Title"] = "JSON";
+    Layout = "~/Pages/Shared/_LayoutLogin.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<body class="bg-white">
+
+    <form method="post" action="" enctype="multipart/form-data">
+
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <input type="file" id="file" asp-for="File" class="custom-file-input form-control" />
+                        <label for="file" class="custom-file-label"> Choose your JSON file</label>
+
+                        <p class="card-text"><small class="text-muted "> <button type="submit" class="bstyle btn btn-danger" asp-page-handler="Import">Import</button></small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <label for="File_Name" class="lbltext">Enter your export name</label>
+                        <input type="text" class="bstyle6" name="File_Name" id="File_Name" />
+
+                        <p class="card-text"><small class="text-muted"> <button type="submit" class="bstyle btn btn-danger" asp-page-handler="Export">Export</button></small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+        <hr />
+       
+
+        <script>
+            $(document).ready(function () {
+                $('.custom-file-input').on('change', function () {
+                    var fileName = $(this).val().split('\\').pop();
+                    $(this).next('.custom-file-label').html(fileName);
+                });
+            });</script>
+
+</body>
+</html>
+
+
+

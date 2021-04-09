@@ -1,0 +1,18 @@
+{
+"Book":
+[
+ {
+                 'Id': 12,
+		 'Username': 'arz',
+                 'Tittle': 'Simyacı',
+                 'Author': 'Paulo Coelho',
+		 'Translator': 'Özdemir İnce',
+		 'Publisher': 'Can Yayınları',
+		 'BookDescription': 'nasihatname',
+		 'BookCover': 'image/simyacı.jpg',
+		 'Categories': 'roman',
+		 'ReadingStatus': 'completed'
+                 
+ }
+]
+}

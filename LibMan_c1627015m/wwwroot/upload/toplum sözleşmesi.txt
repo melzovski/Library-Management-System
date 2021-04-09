@@ -1,0 +1,18 @@
+{
+"Book":
+[
+ {
+                 'Id': 13,
+		 'Username': 'arz',
+                 'Tittle': 'Toplum Sözleşmesi',
+                 'Author': 'Jean-Jacques Rousseau',
+		 'Translator': 'Vedat Günyol',
+		 'Publisher': 'İş Bankası Yayınları',
+		 'BookDescription': 'toplum üzerine inceleme',
+		 'BookCover': 'image/toplumsözlesmesi.jpg',
+		 'Categories': 'inceleme',
+		 'ReadingStatus': 'not completed'
+                 
+ }
+]
+}

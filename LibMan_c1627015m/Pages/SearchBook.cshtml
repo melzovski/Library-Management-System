@@ -1,0 +1,67 @@
+﻿@page
+@model LibMan_c1627015m.Pages.SearchBookModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_LayoutLogin.cshtml";
+}
+
+
+<head>
+    <form>
+        <p>
+            <input type="text" asp-for="SearchString" style="width:700px"/>
+            <input type="submit" value="Find" />
+        </p>
+
+    </form>
+
+</head>
+
+
+<body >
+
+   
+            @foreach (var item in Model.Book)
+            {
+                if (item.Username == Model.Username)
+                {
+
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="~/@item.BookCover" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Tittle)</h5>
+                            <p class="card-text">Author: @Html.DisplayFor(modelItem => item.Author)</p>
+                            <p class="card-text">Translator: @Html.DisplayFor(modelItem => item.Translator)</p>
+                            <p class="card-text">Publisher: @Html.DisplayFor(modelItem => item.Publisher)</p>
+                            <p class="card-text">Description: @Html.DisplayFor(modelItem => item.BookDescription)</p>
+                            <p class="card-text">Categorie: @Html.DisplayFor(modelItem => item.Categories)</p>
+                            <p class="card-text">Reading Status: @Html.DisplayFor(modelItem => item.ReadingStatus)</p>
+                            <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                            <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                }
+
+
+
+            }
+        
+
+
+
+</body>
+
+
+<table class="table">
+    @*Markup removed for brevity.*@
+

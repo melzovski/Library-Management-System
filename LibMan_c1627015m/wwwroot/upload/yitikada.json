@@ -1,0 +1,17 @@
+{
+  "Book": [
+    {
+      "Id": 14,
+      "Username": "melz",
+      "Tittle": "Yitik Adanin Oykusu",
+      "Author": "Jose Saramago",
+      "Translator": "Dost Korpe",
+      "Publisher": "Kirmizi Kedi Yayinevi",
+      "BookDescription": "nobel edebiyat odullu",
+      "BookCover": "image/yitikada.jpg",
+      "Categories": "roman",
+      "ReadingStatus": "not completed"
+
+    }
+  ]
+}
